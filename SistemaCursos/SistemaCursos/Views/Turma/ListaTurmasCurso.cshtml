@@ -1,0 +1,29 @@
+﻿@model IEnumerable<SistemaCursos.Models.Turma>
+
+@{
+    ViewBag.Title = "ListaTurmasCurso";
+}
+
+<h2>Lista Turmas Curso</h2>
+
+<p>
+    @Html.ActionLink("Voltar", "Index", "Curso", null, null)
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DescricaoTurma)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescricaoTurma)
+            </td>
+        </tr>
+    }
+
+</table>
